@@ -194,3 +194,23 @@ img {
         grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
     }
 }
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+
+form {
+    width: 300px;
+}
+input {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 100px;
+}
+input, textarea {
+    outline: var(--crowned-color);
+}
