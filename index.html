@@ -88,27 +88,29 @@
         </section>
         
     </section>
-    <!-- <section id="contact">
-        <form action="send_email.php" method="post">
+    <section id="contact">
+        <form action="" method="get">
             <span>GET IN TOUCH</span><br>
             <span>Would love to hear from you!</span><br>
-            <img src="assets/images/MWDLogo.png" alt="">
+            <img src="assets/images/MWDLogo.png" alt="" class="logo"><br>
             <label for="fName">First Name:</label> 
-            <input type="text" id="fName" name="fName" required><br>
+            <input type="text" id="fName" name="fName" placeholder="Jane" required>
             <label for="lName">Last Name</label>
-            <input type="text" id="lName" name="lName" reuired><br>
+            <input type="text" id="lName" name="lName" placeholder="doe" reuired>
             <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required><br>
-             Add number !!!****
-             <label for="phone"></label>
-            <input type="" id="phone">
-            <label for="message">What Would you like to discuss?</label><br>
+            <input type="email" id="email" name="email" required>  
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+            <label for="prefered">Prefered Contact Method?</label>
+            Email: <input type="radio" name="prefered" value="Email">
+            Text: <input type="radio" name="prefered" value="Text" checked>
+            <label for="message">What Would you like to discuss?</label>
             <textarea name="message" id="message" name="message" required></textarea><br>
-            <button type="submit" value="send" class="btn">Submit</button>
+            <button type="submit" name="submit">Submit</button>
         </form>   
-    </section> -->
+    </section>
     <footer>
-        <!-- <table>
+        <table>
             <tr>
                 <th>GET IN TOUCH</th>
                 <th>SOCIALS</th>
@@ -116,7 +118,7 @@
             <tr>
                 <td>CONTACT@MAJESTYWEBMAGIC.COM</td>
             </tr>
-        </table> -->
+        </table> 
         <div class="copyright">
             <p>Copyright Majesty Web Design LLC - All Rights Reserved - &copy; 2025</p>
         </div>
