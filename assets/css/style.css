@@ -15,7 +15,7 @@
     --btn-font: 30px;
 
 }
-
+    
 .navdiv, #navbar, #home, #about, #services, #contact {
     display: flex;
 }
@@ -199,18 +199,62 @@ img {
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    Width: 100%;
+    padding-top: 5%;
+    background-color: var(--btn-backcrowned-color);
+}
+
+#contact > span {
+    font-size: var(--btn-font);
+    font-weight: bolder;
+}
 
 form {
-    width: 300px;
+    max-width: 50%;
+    min-width: 280px;
+    border: 5px solid var(--crowned-color);
+    padding: 2% 10% 5% 10%;
+    margin: 0 0 10% 0;
+    background-color: var(--main-backcrowned-color);
+    color: var(--white);
 }
 input {
     width: 100%;
+    
 }
 
 textarea {
-    resize: vertical;
-    max-height: 100px;
+    resize: none;
+    height: 100px;
+    width: 100%
 }
 input, textarea {
     outline: var(--crowned-color);
+    border: 1px solid var(--crowned-color);
 }
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 4px var(--crowned-color);
+    border: 1px solid var(--crowned-color);
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+form button {
+    background-color: var(--btn-backcrowned-color);
+    color: var(--crowned-color);
+    padding: 2% 1% 2% 1%;
+    width: 100px;
+}
+
+/* 
+@media all and (max-width: 1024) {
+    #wrapper {
+        padding: 0 10% 0 10%;
+    }
+} */

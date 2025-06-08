@@ -7,10 +7,11 @@
     <link rel="icon" type="image/x-icon" href="assets/images/MWDLogo.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/d9d5059e3b.js" crossorigin="anonymous"></script>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 </head>
-<body>
-    
-        <header >
+<body class="is-preload">
+    <div id="wrapper">
+        <header id="header" class="alt">
             <nav>
                 <div class="navdiv">
                     <a href="#"><img src="assets/images/MWDLogo.png" alt="Majesty Web Design Logo" class="logo"></a>
@@ -89,42 +90,52 @@
         
     </section>
     <section id="contact">
-        <form action="" method="get">
-            <span>GET IN TOUCH</span><br>
-            <span>Would love to hear from you!</span><br>
+        <span>GET IN TOUCH</span><br>
+        <span>Would love to hear from you!</span><br>
+        <form action="https://formsubmit.co/6df1b247ac08436c3ade69f7f67f1a87" method="POST">    
+            <!-- Honeypot-->
+            <input type="text" name="_honey" style="display: none;">
+            <!-- disable cap-->
+            <input type="hidden" name="_captcha" value="false">
+
             <img src="assets/images/MWDLogo.png" alt="" class="logo"><br>
-            <label for="fName">First Name:</label> 
+            <label for="fName">First Name:*</label> 
             <input type="text" id="fName" name="fName" placeholder="Jane" required>
-            <label for="lName">Last Name</label>
+            <label for="lName">Last Name:*</label>
             <input type="text" id="lName" name="lName" placeholder="doe" reuired>
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>  
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" required>
-            <label for="prefered">Prefered Contact Method?</label>
-            Email: <input type="radio" name="prefered" value="Email">
-            Text: <input type="radio" name="prefered" value="Text" checked>
-            <label for="message">What Would you like to discuss?</label>
+            <label for="email">Email Address:*</label>
+            <input type="email" id="email" name="email" placeholder="janedoe@gmail.com" required>  
+            <label for="phone">Phone Number:*</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="message">What Would you like to discuss?*</label>
             <textarea name="message" id="message" name="message" required></textarea><br>
-            <button type="submit" name="submit">Submit</button>
+            <button type="submit">Submit</button>
+            
         </form>   
     </section>
-    <footer>
-        <table>
-            <tr>
-                <th>GET IN TOUCH</th>
-                <th>SOCIALS</th>
-            </tr>
-            <tr>
-                <td>CONTACT@MAJESTYWEBMAGIC.COM</td>
-            </tr>
-        </table> 
+    <!-- <footer id="footer">
+        <section>
+            <h2>Get In Touch</h2>
+            <dl class="alt">
+                <dt>Address</dt>
+                <dd>Chareleston, SC</dd>
+                </dd>
+                <dt>Email</dt>
+                <dd><a href="#">contact@majestywebmagic.com</a></dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="#" class="fa-brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="fa-brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="fa-brands fa-github alt"><span class="label">GitHub</span></a></li>
+            </ul>
+        </section>
         <div class="copyright">
             <p>Copyright Majesty Web Design LLC - All Rights Reserved - &copy; 2025</p>
         </div>
     </footer> 
+</div> -->
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/main.js"></script>
-    
+    <script src="assets/js/jquery.scrollex.min.js"></script>
 </body>
 </html>
