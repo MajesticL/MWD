@@ -27,7 +27,9 @@ header {
 }
 .navdiv{
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 .logo {
     height: 100px;
@@ -60,7 +62,51 @@ span {
 }
 #wrapper {
     padding: 0 10% 0 10%;
-    background: linear-gradient(var(--btn-backcrowned-color), var(--crowned-color), var(--main-backcrowned-color));
+    background: linear-gradient(var(--btn-backcrowned-color), 
+        var(--crowned-color) 60%, 
+        var(--main-backcrowned-color));
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .logo-name{
+        text-align: center;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+     header {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        height: auto; 
+        padding: 15px 0; 
+    }
+
+    .navdiv {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px; 
+    }
+}
+@media (max-width: 1024px) {
+    .logo-name {
+        font-size: 24px;
+        text-align: center;
+    }
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -70,8 +116,9 @@ span {
     justify-content: center;;
     background: linear-gradient(rgba(70,30,90, 0.5)),
     url('../images/net.jpg') no-repeat center center;
-    min-height: 900px;
+    min-height: 100vh;
     background-size: cover;
+
 }
 .main-content h1{
     font-size: 96px;
@@ -98,6 +145,14 @@ img {
     height: 150px;
 }
 
+@media (max-width: 480px) {
+    .main-content h1 {
+        font-size: 60px;
+        margin: 20px auto;
+    }
+}
+
+
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 #about {
@@ -105,10 +160,11 @@ img {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 600px;
+    min-height: autopx;
     background-color: var(--main-backcrowned-color);
     color: var(--white);
     border: 10px solid var(--crowned-color);
+    padding: 5%;
 }
 #about p {
     font-size: 30px;
@@ -174,35 +230,20 @@ img {
 
 
 @media (max-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        height: auto; 
-        padding: 15px 0; 
-    }
-
-    .navdiv {
-        width: 100%;
-        display: flex;
-        justify-content: center; 
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #navbar {
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: center;
-        gap: 15px; 
-        flex-direction: column;
-        text-align: center;
-    }
-
     .cards {
-        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #services {
+        padding-bottom: 0;
     }
 }
+
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -226,14 +267,15 @@ img {
 
 form {
     max-width: 50%;
-    /* min-width: 280px; */
+    min-width: 500px; 
     border: 5px solid var(--crowned-color);
     padding: 2% 10% 5% 10%;
     margin: 0 0 10% 0;
     background-color: var(--main-backcrowned-color);
     color: var(--white);
+
 }
-input {
+input, textarea {
     width: 100%;
     
 }
@@ -241,7 +283,6 @@ input {
 textarea {
     resize: none;
     height: 100px;
-    width: 100%
 }
 input, textarea {
     outline: var(--crowned-color);
@@ -252,22 +293,20 @@ input:focus, textarea:focus {
     box-shadow: 0 0 4px var(--crowned-color);
     border: 1px solid var(--crowned-color);
 }
+button {
+    margin-top: 5%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px){
+    form {
+        min-width: 240px;
+    }
+}
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
-form button {
-    background-color: var(--btn-backcrowned-color);
-    color: var(--crowned-color);
-    padding: 2% 1% 2% 1%;
-    width: 100px;
-}
-
-/* 
-@media all and (max-width: 1024) {
-    #wrapper {
-        padding: 0 10% 0 10%;
-    }
-} */
 
 @media screen and (max-width: 480px) {
     html, body {
@@ -276,20 +315,7 @@ form button {
 
 	}
 
-/* #footer {
-    display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-        flex-direction: column;
-		padding: 5em 5em 3em 5em ;
-		width: 100%;
-		margin: 0 0 3em -2em;
-} */
+ 
 
 #footer {
     margin-top: auto;
@@ -305,25 +331,21 @@ form button {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 .icons a {
     font-size: 20px;
 }
-/* #footer.copyright {
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
 
-} */
+@media (max-width: 768px) {
+    #footer ul {
+        flex-direction: column; 
+    }
 
-
-
-
-
-
-
+    .icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+} 
 
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
