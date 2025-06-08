@@ -58,8 +58,10 @@ a {
 span {
     color: var(--crowned-color);
 }
-
-
+#wrapper {
+    padding: 0 10% 0 10%;
+    background: linear-gradient(var(--btn-backcrowned-color), var(--crowned-color), var(--main-backcrowned-color));
+}
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 #home {
@@ -127,6 +129,9 @@ img {
 #services > h2 {
     margin: 0 0 30px 0;
 }
+#services >span {
+    color: inherit;
+}
 
 .cards {
     margin: 0 auto;
@@ -171,23 +176,27 @@ img {
 @media (max-width: 768px) {
     header {
         display: flex;
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center contents */
-        height: auto; /* Adjust height dynamically */
-        padding: 15px 0; /* Add spacing */
+        flex-direction: column; 
+        align-items: center; 
+        height: auto; 
+        padding: 15px 0; 
     }
 
     .navdiv {
-        width: 100%; /* Make sure navbar spans the header */
+        width: 100%;
         display: flex;
-        justify-content: center; /* Center items */
+        justify-content: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     #navbar {
         display: flex;
-        flex-wrap: wrap; /* Allow items to wrap */
+        flex-wrap: wrap; 
         justify-content: center;
-        gap: 15px; /* Adjust spacing */
+        gap: 15px; 
+        flex-direction: column;
+        text-align: center;
     }
 
     .cards {
@@ -212,11 +221,12 @@ img {
 #contact > span {
     font-size: var(--btn-font);
     font-weight: bolder;
+    text-align: center;
 }
 
 form {
     max-width: 50%;
-    min-width: 280px;
+    /* min-width: 280px; */
     border: 5px solid var(--crowned-color);
     padding: 2% 10% 5% 10%;
     margin: 0 0 10% 0;
@@ -258,3 +268,70 @@ form button {
         padding: 0 10% 0 10%;
     }
 } */
+
+@media screen and (max-width: 480px) {
+    html, body {
+			min-width: 320px;
+		}
+
+	}
+
+/* #footer {
+    display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+        flex-direction: column;
+		padding: 5em 5em 3em 5em ;
+		width: 100%;
+		margin: 0 0 3em -2em;
+} */
+
+#footer {
+    margin-top: auto;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+#footer ul {
+    list-style: none;
+}
+.icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.icons a {
+    font-size: 20px;
+}
+/* #footer.copyright {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+
+} */
+
+
+
+
+
+
+
+
+body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+			-moz-animation: none !important;
+			-webkit-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+			-moz-transition: none !important;
+			-webkit-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+		} 
