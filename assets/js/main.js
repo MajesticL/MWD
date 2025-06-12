@@ -17,6 +17,13 @@ document.querySelectorAll('.card-link').forEach(function(link) {
         e.preventDefault();
         const card = link.closest('.card');
         const info = card.querySelector('.card-more-info');
+
+        document.querySelectorAll('.card-more-info').forEach(function(otherInfo){
+            if(otherInfo !== info) {
+                otherInfo.style.display = "none"
+            }
+        });
+
         if (info.style.display === "none" || info.style.display === "") {
             info.style.display = "block";
         } else {
