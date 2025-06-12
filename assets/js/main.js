@@ -1,4 +1,4 @@
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not(.card-link)').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
@@ -11,9 +11,16 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     gsap.to(".coming", {
-//             rotation: 360,
-//             duration: 1,
-//         });
-// });
+
+document.querySelectorAll('.card-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const card = link.closest('.card');
+        const info = card.querySelector('.card-more-info');
+        if (info.style.display === "none" || info.style.display === "") {
+            info.style.display = "block";
+        } else {
+            info.style.display = "none";
+        }
+    })
+});

@@ -234,6 +234,16 @@ img {
     object-fit: cover;
 }
 
+.card-more-info {
+    margin-top: 10px;
+    background: var(--btn-backcrowned-color);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    transition: all 0.3s;
+    border: 5px solid red;
+}
 
 @media (max-width: 768px) {
     .cards {
