@@ -1733,6 +1733,24 @@ input, select, textarea {
 
 		}
 
+/* portfolio directions */
+
+.col-4 .col-2 {
+	display: flex;
+	justify-content: space-around;
+	color: blue;
+	border: solid 1px red;
+}
+.col-4 .col-2 p + p {
+	border-left: solid 1px red;
+	padding-left: 18%;
+}
+.col-4 .col-2 a {
+	text-decoration: none;
+}
+
+
+
 /* Sections/Article */
 
 	section, article {
@@ -1754,11 +1772,14 @@ input, select, textarea {
 	.image {
 		display: inline-block;
 		border: 0;
+
 	}
 
 		.image img {
 			display: block;
-			width: 100%;
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.image.avatar48 {
@@ -1847,14 +1868,26 @@ input, select, textarea {
 		text-align: left;
 		margin-bottom: 0.5em;
 	}
+	input:disabled,
+	textarea:disabled,
+	select:disabled {
+		background-color: #f0f0f0;
+		color: #888;
+		border-color: #ccc;
+		opacity: 0.7;
+		cursor: not-allowed;
+	}
+
 
 	form input[type="text"],
 	form input[type="email"],
 	form input[type="password"],
+	form input[type="tel"],
 	form select,
 	form textarea {
 		position: relative;
 		-webkit-appearance: none;
+		appearance: none;
 		display: block;
 		border: 0;
 		outline: 0;
@@ -1874,6 +1907,7 @@ input, select, textarea {
 		form input[type="text"]:focus,
 		form input[type="email"]:focus,
 		form input[type="password"]:focus,
+		form input[type="tel"]:focus,
 		form select:focus,
 		form textarea:focus {
 			box-shadow: 0 0 2px 1px #8ebebc;
@@ -1883,6 +1917,7 @@ input, select, textarea {
 	form input[type="text"],
 	form input[type="email"],
 	form input[type="password"],
+	form input[type="tel"],
 	form select {
 		line-height: 1.25em;
 	}
@@ -2259,10 +2294,10 @@ input, select, textarea {
 				height: 60vh;
 			}
 
-			#main > section.one {
-				/* background-image: url("../../images/net.jpg"); */
+			/* #main > section.one {
+				 background-image: url("../../images/net.jpg");
 				
-			}
+			} */
 
 			#main > section.two {
 				background-color: #f5fafa;
