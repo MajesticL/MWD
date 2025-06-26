@@ -221,8 +221,10 @@ input, select, textarea {
 
 	.container {
 		margin: 0 auto;
-		max-width: 100%;
-		width: 1400px;
+		max-width: 1400px;
+		width: 100%;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
@@ -264,6 +266,12 @@ input, select, textarea {
 			}
 
 		}
+		@media screen and (max-width: 480px) {
+			.container {
+				padding-left: 0.5em;
+				padding-right: 0.5em;
+			}
+}
 
 /* Row */
 
@@ -2293,6 +2301,14 @@ input, select, textarea {
     			url('../../images/net.jpg') no-repeat center center;
 				height: 60vh;
 			}
+
+			@media screen and (max-width: 736px) {
+				#main > section.cover {
+					padding: 2em 0;
+					height: auto;
+					min-height: 60vh;
+				}
+}
 
 			/* #main > section.one {
 				 background-image: url("../../images/net.jpg");
