@@ -168,11 +168,13 @@
 
 							<form method="post" action="https://formsubmit.co/contact@majestywebmagic.com" netlify>
 								<fieldset>
+									<input type="hidden" name="_captcha" value="false">
 									<div class="row">
 									<div class="col-6 col-12-mobile"><input type="text" name="firstName" placeholder="First Name*" required/></div>
 									<div class="col-6 col-12-mobile"><input type="text" name="LastName" placeholder="Last Name*" required/></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email*" required/></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email Address*" required/></div>
 									<div class="col-6 col-12-mobile"><input type="tel" name="Phone Number" placeholder="Phone Number*" required></div>
+									<input type="hidden" name="_subject" value="New submission!">
 									<div class="col-12">
 										<textarea name="message" placeholder="Message*" required></textarea>
 									</div>
