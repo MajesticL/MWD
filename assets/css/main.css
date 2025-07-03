@@ -1746,12 +1746,9 @@ input, select, textarea {
 .col-4 .col-2 {
 	display: flex;
 	justify-content: space-around;
-	color: blue;
+	color: var(--special-text-color);
+	background-color: var(--btn-background-color);
 	border: solid 1px red;
-}
-.col-4 .col-2 p + p {
-	border-left: solid 1px red;
-	padding-left: 18%;
 }
 .col-4 .col-2 a {
 	text-decoration: none;
