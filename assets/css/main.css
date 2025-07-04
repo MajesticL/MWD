@@ -1748,7 +1748,7 @@ input, select, textarea {
 	justify-content: space-around;
 	color: var(--special-text-color);
 	background-color: var(--btn-background-color);
-	border: solid 1px red;
+	border-radius: 0 0 10px 10px;
 }
 .col-4 .col-2 a {
 	text-decoration: none;
